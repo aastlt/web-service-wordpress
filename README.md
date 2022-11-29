@@ -161,13 +161,13 @@
 
 2.5.2. Проверим доступность сервиса Elastic набрав в браузере:
 
-	192.168.0.121:5601 (необходимо некоторое время для запуска сервиса)
+	192.168.0.121:5601 # Необходимо некоторое время для запуска сервиса
 
 2.5.3. Настроим web-интерфейс:
 
 Management > Stack Management > Index patterns > Create index pattern > Name - nginxlogs-*, apachelogs, mysqllogs, mysqlslavelogs > Timestamp field - @timestamp
 	
-	Analytics > Dashboard > Create new dashboard > Create visualization 
+Analytics > Dashboard > Create new dashboard > Create visualization 
 (Как пример для nginx: Bar horizontal > request.keyword, host.ip.keyword. Donut > slice by response, size by records)
 
 
