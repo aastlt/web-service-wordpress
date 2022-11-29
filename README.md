@@ -219,9 +219,7 @@ https://grafana.com/grafana/dashboards/ - поиск дашбордов
 
 3.2.1. На 192.168.0.111 выполним:
 
-(Раскомментируем создание базы и создание пользователя (по необходимости))
-
-	nano /root/mysql-m/recovery.sh
+	nano /root/mysql-m/recovery.sh # Раскомментируем создание базы и создание пользователя (по необходимости)
 
 	bash /root/mysql-m/recovery.sh
 
