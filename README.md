@@ -187,6 +187,7 @@ Analytics > Dashboard > Create new dashboard > Create visualization
 	192.168.0.122:3000
 
 login - admin
+
 password - admin
 
 2.6.3. Настроим web-интерфейс:
