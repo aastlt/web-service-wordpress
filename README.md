@@ -79,7 +79,7 @@
 
 	git clone https://github.com/aastlt/mysql-m.git
 
-	Для репликации будет создан пользователь 'repl' с паролем 'Replpass1$':
+Для репликации будет создан пользователь 'repl' с паролем 'Replpass1$':
 
 	bash /root/mysql-m/master-install.sh
 
