@@ -168,6 +168,7 @@
 Management > Stack Management > Index patterns > Create index pattern > Name - nginxlogs-*, apachelogs, mysqllogs, mysqlslavelogs > Timestamp field - @timestamp
 	
 Analytics > Dashboard > Create new dashboard > Create visualization 
+
 (Как пример для nginx: Bar horizontal > request.keyword, host.ip.keyword. Donut > slice by response, size by records)
 
 
