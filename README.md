@@ -83,9 +83,9 @@
 
 	bash /root/mysql-m/master-install.sh
 
-	Скрипт установит доп. ПО (nano, wget, zsh), настроит Iptables, установит и запустит MySQL, настроит master-репликацию, установит и запустит Filebeat и Node-exporter. Также выведет на экран временный пароль пользователя 'root', который необходимо сменить в интерактивном режиме для дальнейшей работы. Для удобства сменим пароль на 'Testpass1$'. 
+Скрипт установит доп. ПО (nano, wget, zsh), настроит Iptables, установит и запустит MySQL, настроит master-репликацию, установит и запустит Filebeat и Node-exporter. Также выведет на экран временный пароль пользователя 'root', который необходимо сменить в интерактивном режиме для дальнейшей работы. Для удобства сменим пароль на 'Testpass1$'. 
 	
-	По окончании работы скрипта на экран выведутся данные о позиции бинлога.
+По окончании работы скрипта на экран выведутся данные о позиции бинлога.
 	
 2.1.2. На 192.168.0.112 выполним:
 
@@ -93,13 +93,13 @@
 
 	bash /root/mysql-s/slave-install.sh
 
-	Скрипт установит доп. ПО (nano, wget, zsh), настроит Iptables, установит и запустит MySQL, установит и запустит Filebeat и Node-exporter. Также выведет на экран временный пароль пользователя 'root', который необходимо сменить в интерактивном режиме для дальнейшей работы. Для удобства сменим пароль на 'Testpass1$'.
+Скрипт установит доп. ПО (nano, wget, zsh), настроит Iptables, установит и запустит MySQL, установит и запустит Filebeat и Node-exporter. Также выведет на экран временный пароль пользователя 'root', который необходимо сменить в интерактивном режиме для дальнейшей работы. Для удобства сменим пароль на 'Testpass1$'.
 
 2.1.3. Используя данные позиции бинлога mysql-master в качестве аргумента, на 192.168.0.112 выполним:
 
 	bash /root/mysql-s/repl.sh <position>
 
-	Скрипт настроит slave-репликацию. Также добавит задачу в Cron для автоматического резервного копирования базы данных Wordpress ежедневно в 02:30. Резервные копии хранятся в течение недели, далее перезаписываются.
+Скрипт настроит slave-репликацию. Также добавит задачу в Cron для автоматического резервного копирования базы данных Wordpress ежедневно в 02:30. Резервные копии хранятся в течение недели, далее перезаписываются.
 
 2.1.4. Проверим статус репликации - на 192.168.0.112 выполним:
 
@@ -127,7 +127,7 @@
 
 	bash /root/backend/backend-install.sh
 
-	Скрипт установит доп. ПО (nano, wget, zsh), настроит Iptables, установит и запустит Apache, php и php-модули, установит и настроит Wordpress, установит и запустит Filebeat и Node-exporter. Также настроит балансировку нагрузки для Nginx создав три виртуальных хоста с портами 80, 81, 82.
+Скрипт установит доп. ПО (nano, wget, zsh), настроит Iptables, установит и запустит Apache, php и php-модули, установит и настроит Wordpress, установит и запустит Filebeat и Node-exporter. Также настроит балансировку нагрузки для Nginx создав три виртуальных хоста с портами 80, 81, 82.
 
 2.3.2. Проверим доступность web-сервера набрав в браузере:
 
@@ -142,7 +142,7 @@
 
 	bash /root/frontend/frontend-install.sh
 
-	Скрипт установит доп. ПО (nano, wget, zsh), настроит Iptables, установит и запустит Nginx, установит и запустит Filebeat и Node-exporter. Также настроит балансировку нагрузки через Apache.
+Скрипт установит доп. ПО (nano, wget, zsh), настроит Iptables, установит и запустит Nginx, установит и запустит Filebeat и Node-exporter. Также настроит балансировку нагрузки через Apache.
 
 2.4.2. Проверим доступность web-сервера набрав в браузере:
 
@@ -157,7 +157,7 @@
 
 	bash /root/elk/elk-install.sh
 	
-	Скрипт установит доп. ПО (nano, wget, zsh), настроит Iptables, установит и запустит компоненты Java, необходимые для работы ELK, с лимитом оперативной памяти 2гб, установит и запустит Elasticsearch, Logstash и Kibana, установит и запустит Node-exporter.
+Скрипт установит доп. ПО (nano, wget, zsh), настроит Iptables, установит и запустит компоненты Java, необходимые для работы ELK, с лимитом оперативной памяти 2гб, установит и запустит Elasticsearch, Logstash и Kibana, установит и запустит Node-exporter.
 
 2.5.2. Проверим доступность сервиса Elastic набрав в браузере:
 
@@ -165,10 +165,10 @@
 
 2.5.3. Настроим web-интерфейс:
 
-	Management > Stack Management > Index patterns > Create index pattern > Name - nginxlogs-*, apachelogs, mysqllogs, mysqlslavelogs > Timestamp field - @timestamp
+Management > Stack Management > Index patterns > Create index pattern > Name - nginxlogs-*, apachelogs, mysqllogs, mysqlslavelogs > Timestamp field - @timestamp
 	
 	Analytics > Dashboard > Create new dashboard > Create visualization 
-(Как пример для nginx: Bar horizontal - request.keyword, host.ip.keyword. Donut - slice by response, size by records)
+(Как пример для nginx: Bar horizontal > request.keyword, host.ip.keyword. Donut > slice by response, size by records)
 
 
 2.6. Настроим централизованный мониторинг работы web-сервиса установив Prometheus и Grafana.
@@ -179,7 +179,7 @@
 
 	bash /root/prometheus/prometheus-install.sh
 
-	Скрипт установит доп. ПО (nano, wget, zsh), настроит Iptables, установит и запустит Prometheus и Grafana.
+Скрипт установит доп. ПО (nano, wget, zsh), настроит Iptables, установит и запустит Prometheus и Grafana.
 
 2.6.2. Проверим доступность сервиса Grafana набрав в браузере:
 
@@ -189,9 +189,9 @@
 
 2.6.3. Настроим web-интерфейс:
 
-	Configuration > Data sources > Add data source > Prometheus - default, URL - http://192.168.0.122:9090 > Save & test
-	Dashboards > Import > 11074 (ID)
-	https://grafana.com/grafana/dashboards/ - поиск дашбордов
+Configuration > Data sources > Add data source > Prometheus - default, URL - http://192.168.0.122:9090 > Save & test
+Dashboards > Import > 11074 (ID)
+https://grafana.com/grafana/dashboards/ - поиск дашбордов
 
 
 
@@ -204,7 +204,7 @@
 
 	bash /root/mysql-s/backup.sh
 	
-	Скрипт создаст резервную копию базы данных Wordpress в директории /root/mysql-s/backup с указанием порядкового номера дня недели. 
+Скрипт создаст резервную копию базы данных Wordpress в директории /root/mysql-s/backup с указанием порядкового номера дня недели. 
 
 3.1.2. Отправим данные на mysql-master - на 192.168.0.112 выполним:
 
