@@ -194,6 +194,7 @@ password - admin
 
 Configuration > Data sources > Add data source > Prometheus - default, URL - http://192.168.0.122:9090 > Save & test
 Dashboards > Import > 11074 (ID)
+
 https://grafana.com/grafana/dashboards/ - поиск дашбордов
 
 
