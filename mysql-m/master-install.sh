@@ -38,7 +38,7 @@ cp -v /root/mysql-m/node_exporter-1.4.0.linux-amd64/node_exporter.service /etc/s
 systemctl daemon-reload
 systemctl enable --now node_exporter.service
 
-#Смена временного пароля
+#Смена временного пароля и настройка безопасности mysql
 grep "A temporary password" /var/log/mysqld.log
 mysql_secure_installation
 
