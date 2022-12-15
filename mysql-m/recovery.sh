@@ -14,7 +14,7 @@ DIR="/root/mysql-m/wpdb*"
 for s in `ls -1 $DIR`;
     do
     echo "--> $s restoring... ";
-    zcat $DIR/$s | /usr/bin/mysql --user=$USER --password=$PASS $DB;
+    zcat $DIR/$s | /usr/bin/mysql --user=$USER --password=$PASS $DB &
     done
 
 echo "GRANT ALL PRIVILEGES ON wpdb.* TO 'wpuser'@'%';" | mysql --user=$USER --password=$PASS
